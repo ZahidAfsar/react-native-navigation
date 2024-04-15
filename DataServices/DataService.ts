@@ -35,3 +35,9 @@ export const login = async (userInfo:IUserInfo) => {
     return data;
 }
 
+export const narutoFetch = async () => {
+    
+    const promise = await fetch('https://narutodb.xyz/api/character/1344');
+    const data = await promise.json();
+    return data;
+}

@@ -3,14 +3,14 @@ import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { IToken } from '../Interface/Interface';
 import { createAccount, login } from '../DataServices/DataService';
-import { Props } from '../type';
+import { LoginProps, Props } from '../type';
 
 const LoginFormComponent = () => {
     const [username, setUsername] = useState<string>('');
     const [password, setPassword] = useState<string>('');
     const [edit, setEdit] = useState<boolean>(true);
 
-    const navigate = useNavigation<Props>()
+    const navigate = useNavigation<LoginProps>()
 
     const handleSubmit = async () => {
         const userData = {
